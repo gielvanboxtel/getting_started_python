@@ -23,7 +23,7 @@ class ChatRequest(BaseModel):
 
 
 def generate_stream(question: str):
-  result = client.generate(stream=True, model="llama3.2", prompt=question)
+  result = client.generate(stream=True, model="llama3.1:8b", prompt=question)
 
   for chunk in result:
     if chunk.response:
